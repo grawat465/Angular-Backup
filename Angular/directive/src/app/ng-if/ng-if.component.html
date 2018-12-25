@@ -1,0 +1,21 @@
+<div [ngStyle]="{'color':'green'}">
+  First Name<input type="text" name="ename" [(ngModel)]="ename">
+  {{ename}}
+  <br>
+  <br>
+  Salary<input type="number" name="salary" [(ngModel)]="empsal">
+  {{empsal}}
+  <br>
+  <br>
+  
+  
+  Employee id<input type="number" name="id"  [(ngModel)]="empid">
+  {{empid}}
+  <Br>
+  
+  <Br>
+  <div *ngIf="empsal &lt; 10000">Category A</div>
+  <div *ngIf="empsal &gt;20000 && empsal &lt;50000">Category B</div>
+  <div *ngIf="empsal &gt; 50000">Category C</div>
+  <button name="Display" (click)="Display()">Display </button>
+  </div>

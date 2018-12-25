@@ -1,0 +1,35 @@
+<form #f="ngForm">
+  <div>
+      <br>
+  <label>
+   
+    Employee id
+  </label>
+  <input type="text" required pattern="[1-9]{4}"  name="empid" #eid="ngModel"  [(ngModel)]="one">
+</div>
+
+
+one{{eid.valid}}<br>
+
+<div>
+<div *ngIf="3 &lt; 45000" style="margin-left:30%;" style="color:red;">hello there</div>
+
+    <br>
+<label>
+ 
+  Employee name
+</label>
+<input type="text" name="empname">
+</div>
+<div>
+    <br>
+<label>
+ 
+  Salary
+</label>
+<input type="number" name="empsal">
+</div>
+<br>
+<button type="button"  (click)="Display(eid.value)" value="Submit">Submit</button>
+</form>
+

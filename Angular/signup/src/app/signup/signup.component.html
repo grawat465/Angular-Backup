@@ -1,0 +1,158 @@
+
+  <div id="grad1">
+      
+    <head>
+      <title>Angular Sign Up Page</title>
+      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+
+<!-- jQuery library -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+<!-- Latest compiled JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    </head>
+    
+      
+ <style>
+      #grad1 {
+          height:800px;
+          background-color: red; 
+          background-image: linear-gradient(#aaffa9,#11ffbd);
+      }
+      </style>
+     
+      
+      <div class="container-fluid">
+
+        <h2 id="box"> Customer Registration Form</h2>
+  
+    <form [formGroup]="registrationForm">
+      <div class="form-group">
+        <label>Username</label>
+        <input type="text" formControlName="userName"  placeholder="Username" class="form-control">
+        
+        <div *ngIf="registrationForm['controls'].userName.hasError('minlength')" class="alert alert-danger">
+          <Strong>Username length must be greator than 3</Strong>
+        </div>
+        <div *ngIf="registrationForm['controls'].userName.hasError('pattern')" class="alert alert-danger">
+        <strong>Pattern should be right</strong>
+        </div>
+        <div *ngIf="registrationForm['controls'].userName.hasError('maxlength')" class="alert alert-danger">
+          <strong>length must be less  than 10</strong>
+        </div>
+       
+      </div>
+
+      <div class="form-group">
+        <label>Password</label>
+        <input type="password" formControlName="password"  placeholder="Password"class="form-control">
+
+        
+      
+        <div *ngIf="registrationForm['controls'].password.hasError('pattern')" class="alert alert-danger">
+          <strong> Password should match the format</strong>
+        </div>
+      </div>
+
+      <div class="form-group">
+        <label> Confirm Password</label>
+        <input type="password" formControlName="Cpassword"   placeholder="Confirm the Password"class="form-control">
+       
+      
+        <div *ngIf="registrationForm['controls'].Cpassword.hasError('pattern')" class="alert alert-danger">
+          <strong> Confirm Password should match the format</strong>
+        </div>
+      </div>
+      <div class="form-group">
+        <label for="contry">State</label>
+        <select class="form-control" id="gender" formControlName="State">
+          <option value disabled> --Please Select Your City--</option>
+          <option value ="Haryana">Haryana</option>
+          <option  value="Delhi"> Delhi</option>
+          <option  value="Rajasthan"> Rajasthan</option>
+          <option  value="Bihar" > Bihar</option>
+          <option  value="Maharastahtra" > Maharastahtra</option>
+          <option  value="Goa" > Goa</option>
+          <option  value="Others" >Others</option>
+
+        </select>
+       
+      </div>
+
+      <div formGroupName="address">
+      <div class="form-group">
+        <label>City </label>
+        <input type="text" formControlName="city" class="form-control">
+       
+        <div *ngIf="registrationForm['controls'].address['controls'].city.hasError('minlength')" class="alert alert-danger">
+          <strong>City length must be greator than 4</strong>
+        </div>
+        <div *ngIf="registrationForm['controls'].address['controls'].city.hasError('maxlength')" class="alert alert-danger">
+          <strong>City length must be smaller than 10
+            </strong>
+        </div>
+      </div>
+
+      
+      <div class="form-group">
+        <label>Postal</label>
+        <input type="text" formControlName="pincode" class="form-control">
+      
+
+       
+        <div *ngIf="registrationForm['controls'].address['controls'].pincode.hasError('pattern') " class="alert alert-danger">
+          <strong> Pincode should be numeric and length size must be smaller than 6</strong>
+        </div>
+      </div>
+
+      
+      <div class="form-group">
+        <label>Street</label>
+        <input type="text" formControlName="street" class="form-control">
+       
+        <div *ngIf="registrationForm['controls'].address['controls'].street.hasError('minlength') " class="alert alert-danger">
+          <strong>Address should between 9 and 100 characters</strong>
+        </div>
+        
+      </div>
+      </div>
+      <div class="form-group">
+        <label>Gender</label>
+      <div class="custom-control custom-radio">
+        
+            <input type="radio"  class="custom-control-input"  id="gender_male"  value="Male" formControlName="gender"  checked>
+            <label  class="custom-control-label">Male</label>
+        
+    </div>
+    &nbsp;  
+    <div class="custom-control custom-radio">
+       
+            <input type="radio"  id="gender_female"  class="custom-control-input" value="Female" formControlName="gender" >
+            <label class="custom-control-label"> Female</label>
+    </div>
+    </div>
+    <div class="form-group">
+    <div class="checkbox checkbox-success">
+      <input type="checkbox"   id="checkbox" class="styled" type="checkbox" unchecked>
+      <label for="checkbox">
+      <h4 id="line">I Agree to Terms and Conditions</h4></label>
+       
+ 
+      
+  </div>
+    </div>
+      
+      
+
+
+     
+      <button class="btn btn-success" id="submit" (click) ="signUpUser(registrationForm.value)" type="submit">Sign Up</button>
+
+      <button class="btn btn-dark" id="submit1" (click) ="logincomp()" type="submit">Login</button>
+
+
+      
+</form>
+
+</div>
+</div>

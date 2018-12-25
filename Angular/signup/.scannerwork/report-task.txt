@@ -1,0 +1,6 @@
+projectKey=company:SignUp
+serverUrl=http://localhost:9000
+serverVersion=6.7.5.38563
+dashboardUrl=http://localhost:9000/dashboard/index/company:SignUp
+ceTaskId=AWcxUKNk501x8Cn9xmn2
+ceTaskUrl=http://localhost:9000/api/ce/task?id=AWcxUKNk501x8Cn9xmn2

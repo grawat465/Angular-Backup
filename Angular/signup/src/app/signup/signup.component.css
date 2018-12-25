@@ -1,0 +1,53 @@
+.container-fluid{
+
+    width:50vw;
+}
+
+#box{
+
+    margin-left:10vw;
+}
+
+
+input[type=radio]{
+    border:0px;
+    width:10%;
+    height:1.5em;
+}
+
+#gender_male{
+
+    float:left;
+    margin-left:2vw;
+}
+#gender_female{
+
+    float:left;
+    margin-left:2vw;
+}
+input[type="checkbox"]{
+    width: 25px; 
+   
+    margin-top:18px;
+    height: 40px;
+    
+}
+#line{
+    margin-left: 15vw;
+    margin-top:-2vw;
+}
+#submit{
+
+    margin-left: 15vw;
+    width:250px;
+    height:40px;
+}
+
+
+#submit1{
+
+    margin-left:38vw;
+    margin-top: -5vw;
+    width:125px;
+    height:40px;
+}

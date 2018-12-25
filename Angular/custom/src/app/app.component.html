@@ -1,0 +1,34 @@
+<h3>We are creating custom pipes
+Title:
+{{title   | uppercase}}
+<br>
+Date:
+{{dat | date:'short'}}
+<br>
+Amount:
+{{amount}}
+<Br>Week of the month:
+  {{dat | date:'W'}}
+  <br>
+  <Br><Br>
+    Week of the year:
+      {{dat | date:'w'}}
+      <br>
+      <Br>Fulldate:
+        {{dat | date:'fullDate'}}
+
+        <br>
+        Amount in canada:
+        {{amount | currency:'CAD'}}
+        <Br>
+          Amount in India:
+          {{amount | currency:'INR'}}
+<BR>
+          Amount in US:
+          {{amount | currency:'USD' : 'symbol': '3.1-2'}}
+          <br>
+          <Br>
+
+          Abbreviated lines:
+          {{title | abbr}}
+</h3>
